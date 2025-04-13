@@ -20,13 +20,13 @@ from llama.model import ModelArgs, Transformer
 from llama.tokenizer import ChatFormat, Dialog, Message, Tokenizer
 
 
-class CompletionPrediction(TypedDict, total=False):
+class CompletionPrediction(TypedDict, total=True):
     generation: str
     tokens: List[str]  # not required
     logprobs: List[float]  # not required
 
 
-class ChatPrediction(TypedDict, total=False):
+class ChatPrediction(TypedDict, total=True):
     generation: Message
     tokens: List[str]  # not required
     logprobs: List[float]  # not required
